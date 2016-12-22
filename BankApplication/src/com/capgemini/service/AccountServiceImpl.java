@@ -31,6 +31,7 @@ public class AccountServiceImpl implements AccountService {
 		account.setAccountNumber(accountNumber);
 		account.setAmount(amount);
 		
+		
 		if(accountRepository.save(account))
 		{
 			return account;
@@ -43,6 +44,7 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public boolean deposit(int accountNumber,int amount) throws InvalidAmountException, InvalidAccountNumberException {
 		
+		System.out.println("Deposit method");
 		if(accountNumber < 0) {
 			throw new InvalidAmountException();
 		}
