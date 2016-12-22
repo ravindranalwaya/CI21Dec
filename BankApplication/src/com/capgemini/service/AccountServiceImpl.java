@@ -45,6 +45,8 @@ public class AccountServiceImpl implements AccountService {
 	public boolean deposit(int accountNumber,int amount) throws InvalidAmountException, InvalidAccountNumberException {
 		
 		System.out.println("Deposit method");
+		System.out.println("---------");
+		
 		if(accountNumber < 0) {
 			throw new InvalidAmountException();
 		}
